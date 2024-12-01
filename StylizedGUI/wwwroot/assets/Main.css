@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #000000; /* Black background */
+    color: #ffffff;
+    z-index: 1;
+}
+
+/* Side Panel Styling */
+.side-panel {
+    width: 25%;
+    background-color: rgba(30, 30, 30, 0.8); /* Slightly transparent dark */
+    backdrop-filter: blur(10px); /* Adds blur effect */
+    padding: 20px;
+    border-radius: 0 25px 25px 0; /* Rounded right edge */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid #555555; /* Outline for the panel */
+}
+
+    .side-panel h2 {
+        margin-bottom: 20px;
+    }
+
+/* Main Panel Styling */
+.main-panel {
+    flex: 1;
+    background-color: rgba(40, 40, 40, 0.8); /* Slightly transparent dark */
+    backdrop-filter: blur(10px); /* Adds blur effect */
+    border-radius: 25px; /* Rounded corners */
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #555555; /* Outline for the panel */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Panels */
+.panel {
+    background-color: rgba(60, 60, 60, 0.9); /* Darker blur layer */
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #666666; /* Outline */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Slight shadow */
+}
+
+    .panel h3 {
+        margin-bottom: 10px;
+    }
+
+    .panel p {
+        margin-bottom: 15px;
+    }
+
+    /* Button Styling */
+    .panel button {
+        background-color: #c23dff; /* Base button color */
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+    }
+
+        .panel button:hover {
+            background-color: #9800b3;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+#tsparticles {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    background-color: #ffffff00;
+}
+
+/* Button Styling */
+.side-panel button {
+    background-color: #c23dff; /* Base button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.side-panel button:hover {
+    background-color: #9800b3;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.side-panel h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, red, magenta, red, magenta);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 5s infinite linear;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 50%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
